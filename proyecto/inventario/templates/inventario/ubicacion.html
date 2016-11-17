@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sala</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/style.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap.min.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap-theme.min.css" %}" media="screen" />
+  <script type="text/javascript" src="{% static "inventario/js/jquery.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/scripts.js" %}"></script>
+</head>
+<body>
+  <div class="titulo">
+      <h1>Sala {{ubicacion}}</h1>
+  </div>
+  <div class="list">
+  <ul>
+    {% for equipo in equipos %}
+    <li><a href="/inventario/equipo/{{equipo.id}}">{{equipo}}</a></li>
+    {% endfor %}
+
+  </ul>
+  </div>
+
+
+</body>
+</html>

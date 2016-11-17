@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inventario</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/style.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap.min.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap-theme.min.css" %}" media="screen" />
+  <script type="text/javascript" src="{% static "inventario/js/jquery.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/scripts.js" %}"></script>
+</head>
+<body>
+
+  <div class="container-fluid">
+  	<div class="row">
+  	  	<div class="titulo">
+  			<h1>Buscador de equipos</h1>
+  		  </div>
+
+        <div class="cambiadorDePiso">
+          <select name="SeleccionarNivel" id="SeleccionarNivel" onchange="setImage(this);">
+            <option value="">Seleccione nivel</option>
+            <option value="{% static "inventario/images/mapapiso2.jpg" %}">Piso 2</option>
+            <option value="{% static "inventario/images/mapapiso3.jpg" %}">Piso 3</option>
+          </select><br /><br />
+        <img src="" name="image-swap" width="800" />
+
+        </div>
+    </div>
+
+  </div>
+</body>
+</html>
