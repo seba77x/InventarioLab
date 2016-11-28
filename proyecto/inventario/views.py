@@ -2,7 +2,7 @@ from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 from .models import Ubicacion, Equipo
 from django.core import serializers
-
+from .tables import EquipoTable
 
 def index(request):
     return render(request,'inventario/index.html',{})
@@ -11,6 +11,7 @@ def ubicacion(request, idUbicacion):
     ubicacion=Ubicacion.objects.get(pk=idUbicacion)
     equipos=Equipo.objects.filter(ubicacionEquipo=ubicacion.id)
     print (equipos)
+    equipos = EquipoTable()
     return render(request,'inventario/ubicacion.html',{"ubicacion": ubicacion, "equipos": equipos})
 
 def ubicaciones(request):

@@ -1,11 +1,11 @@
-from models import *
+from .models import *
 from table import Table
 from table.columns import Column
 
-class PostTable(Table):
+class EquipoTable(Table):
     id = Column(field='id', header=u'Id')
-    title = Column(field='title', header=u'Titulo')
-    url = Column(field='url', header=u'Url')
-    content = Column(field='content', header=u'Content')
+    ubicacionEquipo = Column(field='ubicacionEquipo', header=u'Ubicacion')
+    estadoEquipo = Column(field='estadoEquipo', header=u'Estado')
+    tipoEquipo = Column(field='tipoEquipo', header=u'Tipo')
     class Meta:
-        model = Post
+        model = Equipo
