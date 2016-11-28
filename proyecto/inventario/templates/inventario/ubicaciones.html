@@ -4,27 +4,78 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Sala</title>
+  <title>Equipo</title>
   {% load static %}
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/style.css" %}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap.min.css" %}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap-theme.min.css" %}" media="screen" />
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://yourwebsite.com/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+
   <script type="text/javascript" src="{% static "inventario/js/jquery.min.js" %}"></script>
   <script type="text/javascript" src="{% static "inventario/js/bootstrap.min.js" %}"></script>
   <script type="text/javascript" src="{% static "inventario/js/scripts.js" %}"></script>
+
 </head>
 <body>
-  <div class="titulo">
-      <h1>Ubicaciones</h1>
-  </div>
+  <header role="banner" id="fh5co-header">
+    <div class="container">
+      <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="{% static "inventario/images/logo.png" %}" alt="Dispute Bills" ></a>
+        </div>
+        <div id="navbar-brand" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                  <li><a href="#" data-nav-section="home"><span><strong>Inicio</strong></span></a></li>
+  		            <li><a href="#" data-nav-section="work"><span><strong>Lista de Ubicaciones</strong></span></a></li>
+  		            <li><a href="#" data-nav-section="testimonials"><strong><span>xxx</span></strong></a></li>
+  		            <li><a href="#" data-nav-section="services"><strong><span>xxx</span></strong></a></li>
+  		            <li><a href="#" data-nav-section="about"><strong><span>xxx</span></a></strong></li>
+  		            <li><a href="#" data-nav-section="contact"><strong><span>Salir</span></strong></a></li>
+  		      </ul>
+  		  </div>
+  		</nav>
+    </div>
+  </header>
 
-  <div class="list">
-  <ul>
-    {% for ubicacion in ubicaciones %}
-    <li><a href="/inventario/ubicacion/{{ubicacion.id}}">{{ubicacion}}</a></li>
-    {% endfor %}
+  <section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+    <div class="gradient"></div>
+      <div class="container">
+    	   <div class="text-wrap">
+    		     <div class="text-inner">
+    					      <div class="row">
+                      <h1> Ubicaciones </h1>
+                    <br>
+                  <div class="list-group">
+                     {% for ubicacion in ubicaciones %}
+                     <a href="/inventario/ubicacion/{{ubicacion.id}}" class="list-group-item list-group-item-info"><strong>{{ubicacion}}</strong></a>
+                     {% endfor %}
+                 </div>
+               </div>
+               </div>
+            </div>
+         </div>
+     <div class="slant"></div>
+   </section>
 
-  </ul>
-  </div>
+     <script src="js/main.js"></script>
+
 </body>
 </html>

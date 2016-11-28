@@ -24,10 +24,9 @@ class Equipo(models.Model):
     ubicacionEquipo = models.ForeignKey(Ubicacion)
     estadoEquipo = models.ForeignKey(Estado)
     tipoEquipo = models.ForeignKey(Tipo_Equipo)
-    # descripcion = models.CharField(max_length=100)
 
     def __str__(self):                                             # hacer lo mismo con las demas
-        return str(self.id)
+        return self.tipoEquipo
 
 class Atributo(models.Model):
     nombreAtributo = models.CharField(max_length=20)
@@ -56,9 +55,6 @@ class Incidencia(models.Model):
 class Lista_Incidencia(models.Model):
     idEquipo = models.ForeignKey(Equipo)
     idIncidencia = models.ForeignKey(Incidencia)
-
-    def __str__(self):                                             # hacer lo mismo con las demas
-        return str(self.idEquipo.tipoEquipo)+" "+str(self.idIncidencia)
 
     class Meta:
         unique_together=(("idEquipo","idIncidencia"))

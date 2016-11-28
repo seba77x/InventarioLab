@@ -529,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 10;
 }
 #fh5co-intro .fh5co-block > .fh5co-text .fh5co-intro-icon {
-  font-size: 50px;
+  font-size: auto;
   color: #52d3aa;
   margin-bottom: 30px;
   display: block;
@@ -1409,7 +1409,3 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*# sourceMappingURL=style.css.map */
-
-.mapita {
-  margin-left: -80px;
-}
