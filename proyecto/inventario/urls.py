@@ -1,7 +1,5 @@
 from django.conf.urls import *
 from django.conf.urls.static import static
-
-
 from . import views
 
 urlpatterns = [
@@ -10,6 +8,8 @@ urlpatterns = [
     url(r'ubicacion.json/', views.ubicaciones_json),
     url(r'equipo/(?P<idEquipo>[0-9]+)$', views.equipo),
     url(r'inventario/', views.index),
-    url(r'^$', views.index)
+    url(r'^$', views.index),
+    url(r'^incidencia/new/$', views.incidencia_new),
+
 
     ]

@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inicio</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/style.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap.min.css" %}" media="screen" />
+  <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap-theme.min.css" %}" media="screen" />
+
+
+  <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+  <link rel='stylesheet prefetch' href='https://yourwebsite.com/bootstrap.css'>
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css'>
+
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="favicon.ico">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="css/animate.css">
+  <!-- Icomoon Icon Fonts-->
+  <link rel="stylesheet" href="css/icomoon.css">
+  <!-- Simple Line Icons -->
+  <link rel="stylesheet" href="css/simple-line-icons.css">
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <!-- Bootstrap  -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <script type="text/javascript" src="{% static "inventario/js/jquery.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/bootstrap.min.js" %}"></script>
+  <script type="text/javascript" src="{% static "inventario/js/scripts.js" %}"></script>
+
+</head>
+<body>
+<header role="banner" id="fh5co-header">
+  <div class="container">
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="{% static "inventario/images/logo.png" %}" alt="Dispute Bills" ></a>
+      </div>
+      <div id="navbar-brand" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" data-nav-section="home"><span><strong>Inicio</strong></span></a></li>
+		            <li><a href="#" data-nav-section="work"><span><strong>Lista de Ubicaciones</strong></span></a></li>
+		            <li><a href="#" data-nav-section="testimonials"><strong><span>xxx</span></strong></a></li>
+		            <li><a href="#" data-nav-section="services"><strong><span>xxx</span></strong></a></li>
+		            <li><a href="#" data-nav-section="about"><strong><span>xxx</span></a></strong></li>
+		            <li><a href="#" data-nav-section="contact"><strong><span>Salir</span></strong></a></li>
+		      </ul>
+		  </div>
+		</nav>
+  </div>
+</header>
+
+<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_2.jpg);" data-stellar-background-ratio="0.5">
+  <div class="gradient"></div>
+    <div class="container">
+  	   <div class="text-wrap">
+  		     <div class="text-inner">
+  					      <div class="row">
+  						            <div class="col-md-8 col-md-offset-2">
+                              <h1 class="to-animate">Mapa de Ubicaciones</h1>
+                                <div class="container-fluid">
+                                  <div class="row">
+                                    <div class="cambiadorDePiso">
+                                      <select class="form-control" name="SeleccionarNivel" id="SeleccionarNivel" onchange="setImage(this);">
+                                        <option value="">Seleccione piso</option>
+                                        <option value="{% static "inventario/images/mapapiso2.jpg" %}">Piso 2</option>
+                                        <option value="{% static "inventario/images/mapapiso3.jpg" %}">Piso 3</option>
+                                      </select><br /><br />
+                                      <img src="" name="image-swap" width="800" />
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+  <div class="slant"></div>
+</section>
+
+	<script src="js/main.js"></script>
+
+</body>
+</html>

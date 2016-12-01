@@ -1412,4 +1412,17 @@ h1, h2, h3, h4, h5, h6 {
 
 .mapita {
   margin-left: -80px;
+    filter:saturate(150%);
+    -webkit-filter:saturate(150%);
+    -moz-filter:saturate(150%);
+    -ms-filter:saturate(150%);
+    -o-filter:saturate(150%);
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+    border-radius: 36px 36px 36px 36px;
+    -moz-border-radius: 36px 36px 36px 36px;
+    -webkit-border-radius: 36px 36px 36px 36px;
 }

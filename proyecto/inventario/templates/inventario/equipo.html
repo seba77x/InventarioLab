@@ -6,6 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Equipo</title>
   {% load static %}
+  {% load table_tags %}
+
+
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/style.css" %}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap.min.css" %}" media="screen" />
   <link rel="stylesheet" type="text/css" href="{% static "inventario/css/bootstrap-theme.min.css" %}" media="screen" />
@@ -43,8 +46,8 @@
         </div>
         <div id="navbar-brand" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                  <li><a href="#" data-nav-section="home"><span><strong>Inicio</strong></span></a></li>
-  		            <li><a href="#" data-nav-section="work"><span><strong>Lista de Ubicaciones</strong></span></a></li>
+              <li><a href="/inventario/" data-nav-section="home"><span><strong>Inicio</strong></span></a></li>
+              <li><a href="/inventario/ubicaciones/" data-nav-section="work"><span><strong>Lista de Ubicaciones</strong></span></a></li>
   		            <li><a href="#" data-nav-section="testimonials"><strong><span>xxx</span></strong></a></li>
   		            <li><a href="#" data-nav-section="services"><strong><span>xxx</span></strong></a></li>
   		            <li><a href="#" data-nav-section="about"><strong><span>xxx</span></a></strong></li>
@@ -61,23 +64,24 @@
   	   <div class="text-wrap">
   		     <div class="text-inner">
   					      <div class="row">
-			                  <h1 class="to-animate">	Hoja de vida equipo {{equipo}}</h1>
+			                  <h1 class="to-animate">	Ficha equipo {{equipo}}</h1>
                         <br>
-                        <h2 class="to-animate"><strong> Estado: </strong> {{equipo.estadoEquipo}}</h2>
-                        <h2 class="to-animate"><strong> Tipo Equipo: </strong> {{equipo.tipoEquipo}}</h2>
-                        <h2 class="to-animate"><strong> Ubicacion: </strong> {{equipo.ubicacionEquipo}}</h2>
-                        <h2 class="to-animate"><strong> Atributos: </strong>  </h2>
-                          <ul>
+                        <h2 class="to-animate"><strong> Estado: {{equipo.estadoEquipo}} </strong></h2>
+                        <h2 class="to-animate"><strong> Tipo Equipo: {{equipo.tipoEquipo}}</strong></h2>
+                        <h2 class="to-animate"><strong> Ubicacion: {{equipo.ubicacionEquipo}}</strong></h2>
+                        <h2 class="to-animate"><strong> Fecha LLegada: {{equipo.fechaLlegada}} </strong></h2>
+                        <h2 class="to-animate"><strong> Fecha Instalacion: {{equipo.fechaInstalacion}} </strong></h2>
+                        <h2 class="to-animate"><strong> Atributos: </strong> </h2>
                              {% for atributo in atributos %}
-                             hola<li>{{equipo.valores}}</li>
+                             <h2 class="to-animate"><strong> > {{atributo}}</strong></h2>
                              {% endfor %}
-                           </ul>
-                           <ul>
+                              <br>
+                              <br>
+                           <!-- <ul>
                               {% for incidencia in incidencias %}
                               <li>{{incidencia}}</li>
                               {% endfor %}
-                            </ul>
-                        <h2 class="to-animate"><strong> Responsable: </strong></h2>
+                            </ul> -->
                     </div>
             </div>
          </div>
@@ -90,29 +94,12 @@
     <div class="row">
       <div class="col-md-12 section-heading text-center">
         <h2 class="to-animate"><strong>Incidencias</strong></h2>
-          <div class="table-responsive">
-            <table class="table">
-              <tr>
-                <th>id </th>
-                <th>Nombre </th>
-                <th>Descripcion </th>
-                <th>Fecha Inicio </th>
-                <th>Fecha Termino </th>
-                <th> Responsable </th>
-              </tr>
-              <tr>
-                <th> 1 </th>
-                <td>Falta de dispositivo</td>
-                <td>Mouse descompuesto, necesita hacer un cambio</td>
-                <td>69/69/69</td>
-                <td>42/42/42</td>
-                <td> Freire </td>
-              </tr>
-            </table>
+
+            {% render_table listaincidencia %}
+
           </div>
         </div>
       </div>
-    </div>
   </section>
 <br>
 <br>
@@ -126,7 +113,7 @@
           <i class="fh5co-intro-icon icon-bulb"></i>
           <h2 class="to-animate">Agregar nueva Incidencia</h2>
           <br>
-          <p><a href="#" class="btn btn-primary">Crear Incidencia</a></p>
+          <p><a href='#' class="btn btn-primary">Crear Incidencia</a></p>
         </div>
       </div>
        <div class="fh5co-block to-animate" style="background-image: url(images/img_8.jpg);">
